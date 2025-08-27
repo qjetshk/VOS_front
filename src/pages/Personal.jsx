@@ -7,6 +7,7 @@ import { useGetUserEventsQuery } from "../store/api/event";
 import { Link } from "react-router-dom";
 import { useGetParticipationsByUserIdQuery } from "../store/api/participation";
 import { useState } from "react";
+import Skeleton from "react-loading-skeleton";
 
 function Personal() {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,8 +17,8 @@ function Personal() {
     await logout();
   };
 
-  const { data: events, isLoading, error } = useGetUserEventsQuery();
-  const { data: participations } = useGetParticipationsByUserIdQuery();
+  const { data: events, isLoading: isLoadingEvents, error } = useGetUserEventsQuery();
+  const { data: participations, isLoading: isLoadingParts } = useGetParticipationsByUserIdQuery();
 
   const tabs = [
     {
@@ -88,7 +89,7 @@ function Personal() {
 
         <hr className="text-lgray" />
         <section className="mt-[50px] mx-auto max-w-[1100px] flex gap-10 flex-wrap justify-center mb-15">
-          {tabs[activeTab].content && tabs[activeTab].content.length > 0 ? (
+          {isLoadingEvents || isLoadingParts ? (<Skeleton width={300} height={200} className="rounded-[30px]"/>) : tabs[activeTab].content && tabs[activeTab].content.length > 0 ? (
             tabs[activeTab].content.map((event) => (
               <Card
                 key={event.id}

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 function Card({
   id,
-  ownerName,
   title,
   desc,
   location,
@@ -14,19 +13,7 @@ function Card({
   count,
 }) {
   return (
-    <Link
-      to={`/event/${id}`}
-      state={{
-        title,
-        ownerName,
-        desc,
-        location,
-        startDate,
-        endDate,
-        date,
-        count,
-      }}
-    >
+    <Link to={`/event/${id}`}>
       <section className="hover:opacity-50 min-w-[340px] transition-opacity duration-300 max-w-[340px] px-[30px] py-5 flex flex-col gap-2.5 rounded-[30px] border border-dgray">
         <h2 className="line-clamp-2">{title}</h2>
         <p className="line-clamp-4 text-[20px]">{desc}</p>

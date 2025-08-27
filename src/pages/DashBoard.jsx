@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../components/Card";
 import { useGetAllEventsQuery } from "../store/api/event";
 import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function DashBoard() {
   const { data: events, isLoading, error } = useGetAllEventsQuery();
