@@ -26,7 +26,7 @@ function CardDetails() {
   console.log(participants);
 
   const isParticipating = participants?.some(
-    (participant) => participant.id === user.id
+    (participant) => participant.id === user?.id
   );
   const currentParticipation = participations?.find(
     (participation) => participation.eventId === id
