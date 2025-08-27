@@ -10,14 +10,10 @@ function DashBoard() {
   if (isLoading) {
     return (
       <section className="mt-25 mb-20 grid grid-cols-2 gap-10 mx-auto max-w-[720px]">
-        <Skeleton className="w-full h-[240px]" />
-        <Skeleton className="w-full h-[240px]" />
-        <Skeleton className="w-full h-[240px]" />
-        <Skeleton className="w-full h-[240px]" />
-        <Skeleton className="w-full h-[240px]" />
-        <Skeleton className="w-full h-[240px]" />
-        <Skeleton className="w-full h-[240px]" />
-        <Skeleton className="w-full h-[240px]" />
+        <Skeleton className="w-full h-[240px] rounded-4xl" />
+        <Skeleton className="w-full h-[240px] rounded-4xl" />
+        <Skeleton className="w-full h-[240px] rounded-4xl" />
+        <Skeleton className="w-full h-[240px] rounded-4xl" />
       </section>
     );
   }
