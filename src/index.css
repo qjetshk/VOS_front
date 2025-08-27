@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme{
+  --breakpoint-*: initial;
+  --breakpoint-mobile: 300px;
+  --breakpoint-med: 510px;
+  --breakpoint-tablet: 720px;
+  --breakpoint-desktop: 1200px;
+  --color-blue: #42B0FF;
+  --color-black: #333333;
+  --color-dgray: #4C4C4C;
+  --color-gray: #A7A7A7;
+  --color-lgray: #D9D9D9;
+}
+
+:root{
+  --blue: #42B0FF;
+  --black: #333333;
+  --dgray: #4C4C4C;
+  --gray: #A7A7A7;
+  --lgray: #D9D9D9;
+}
+
+body{
+  font-family: 'Inter';
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
+}
+
+.cont{
+  
+
+  @media (width <= 720px) {
+    padding-inline: 20px;
+  }
+
+  @media (width >= 720px) {
+    padding-inline: 40px;
+  }
+
+  @media (width <= 400px) {
+    padding-inline: 10px;
+  }
+
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+.input{
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: var(--black) 1px solid;
+  color: var(--dgray);
+  font-size: 20px;
+}
+
+.input::placeholder{
+  color: var(--gray);
+}
+
+h1,h2{
+  color: var(--black);
+  font-weight: bold;
+}
+
+h1{
+  font-size: 48px;
+}
+
+h2{
+  font-size: 30px;
+}
+
+p{
+  color: var(--dgray);
+}
+
+.btn{
+  padding: 15px 30px;
+  color: white;
+  background-color: var(--blue);
+  font-weight: 500;
+  font-size: 24px;
+  transition: all .3s ease;
+  border-radius: 40px;
+  width: fit-content;
+  hyphens: auto;
+}
+
+input{
+  outline: none;
+}
+
+textarea{
+  outline: none;
+}
+
+.btn:hover{
+  background-color: #297fbd;
+}
+
+.link{
+  color: var(--blue);
+  transition: all .3s ease;
+}
+
+.link:hover{
+  color: #297fbd;
+}
