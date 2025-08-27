@@ -10,7 +10,7 @@ function DashBoard() {
   if (isLoading) {
     return (
       <section className="mt-25 mb-20 grid grid-cols-4 gap-5 mx-auto max-w-[700px]">
-        {[...Array(12).map((_) => <Skeleton className="w-full h-auto" />)]}
+        <Skeleton count={10} height={50}/>
       </section>
     );
   }
