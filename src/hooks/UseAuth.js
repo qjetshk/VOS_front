@@ -72,7 +72,7 @@ export function useAuth() {
       return response.data.isAuth;
     } catch (error) {
       setIsAuthenticated(false);
-      error;
+      dispatch(update(null));
       return false;
     } finally {
       setLoading(false);
