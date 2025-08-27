@@ -23,7 +23,7 @@ function Card({
           <span className="text-[18px] text-lgray">{date}</span>
           <div className="flex gap-1">
             <span className="text-[18px] text-blue">{count}</span>
-            <img src={volonts} />
+            <img className="w-full" src={volonts} />
           </div>
         </div>
       </section>
