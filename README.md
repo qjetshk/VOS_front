@@ -6,7 +6,7 @@
 [![Vite](https://img.shields.io/badge/Vite-4.4+-646CFF?logo=vite)](https://vitejs.dev/)
 
 
-##**Демо проекта:**
+## **Демо проекта:**
 [![Live Demo](https://img.shields.io/badge/Demo-Vercel-000000?logo=vercel)](https://vos-front.vercel.app/)
 
 Frontend часть системы учета волонтерами (VOS) - современное React-приложение с интуитивно понятным интерфейсом для организации и координации волонтерской деятельности.
